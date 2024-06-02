@@ -11,13 +11,13 @@ http://127.0.0.1:8000/banks/ - In this url the list of banks is dispalyed
 
 
 
-http://127.0.0.1:8000/banks/<bankname> - This gives the list of all branches for the specific bank
+http://127.0.0.1:8000/banks/ <bankname> - This gives the list of all branches for the specific bank
 
 ![image](https://github.com/Shivani505001/Banks/assets/98374589/63317b88-825a-41aa-899a-a3fdda58fe51)
 
 
 
-http://127.0.0.1:8000/branch/<ifsc> - this url gives the information about a specific branch
+http://127.0.0.1:8000/branch/ <ifsc> - this url gives the information about a specific branch
 
 ![image](https://github.com/Shivani505001/Banks/assets/98374589/fe88d9d4-673a-4ef0-a488-607d6170b730)
 
