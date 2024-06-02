@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Branch Details{% endblock %}
+
+{% block content %}
+    <h2>Branch Details</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p><strong>IFSC:</strong> {{ branch.ifsc }}</p>
+                <p><strong>Branch:</strong> {{ branch.branch }}</p>
+                <p><strong>Address:</strong> {{ branch.address }}</p>
+                <p><strong>City:</strong> {{ branch.city }}</p>
+                <p><strong>District:</strong> {{ branch.district }}</p>
+                <p><strong>State:</strong> {{ branch.state }}</p>
+                <p><strong>Bank Name:</strong> {{ branch.bank_name }}</p>
+                <a class="btn btn-outline-primary" href="{% url 'get_branches' branch.bank_name %}">Back to Branches</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

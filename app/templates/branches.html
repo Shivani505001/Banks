@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Branches for {{ bank_name }}{% endblock %}
+
+{% block content %}
+    <h2>Branches for {{ bank_name }}</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for branch in branches %}
+                <div class="col-md-4">
+                    <button class="btn btn-outline-primary btn-lg btn-block mb-3" onclick="location.href='{% url 'get_branch_details' branch.ifsc %}'">{{ branch.branch }}</button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a class="btn btn-outline-primary" href="{% url 'get_banks' %}">Back to Bank Names</a>
+{% endblock %}

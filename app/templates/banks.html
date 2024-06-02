@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Banks List{% endblock %}
+
+{% block content %}
+    <h2>Banks List</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for bank in banks %}
+                <div class="col-md-4">
+                    <button class="btn btn-outline-primary btn-lg btn-block mb-3" onclick="location.href='{% url 'get_branches' bank.bank_name %}'">{{ bank.bank_name }}</button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
