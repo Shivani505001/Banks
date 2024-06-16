@@ -45,7 +45,7 @@ def get_branches(request,bank_name):
 @api_view(['GET'])
 def get_branch_details(request,ifsc):
     
-    branch = get_object_or_404(bank, ifsc=ifsc)
+    branch = get_object_or_404(bank, ifsc=ifsc) # retrieve a single bank object where the ifsc field matches the value of the ifsc variable.
     seri = BranchSerializer(branch)
     context = {'branch': seri.data}
     return render(request, 'details.html', context)
